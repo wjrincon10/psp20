@@ -71,7 +71,7 @@ public class App extends HttpServlet{
         
         resul = calcSimpson.integral();
         
-        MainView.showResults(req, resp, x, dof, 10.0, resul);
+        MainView.showResults(req, resp, x, dof, resul);
        }catch(Exception ex){
          MainView.error(req, resp);
        }
