@@ -29,6 +29,7 @@ public class CalcularSimpson {
     }
     
     private double Fx(double x){
-        return Math.cos(x);
+       // return Math.cos(x);
+        return 2*x;
     }
 }
