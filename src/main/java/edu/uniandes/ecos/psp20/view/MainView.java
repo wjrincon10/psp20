@@ -26,7 +26,6 @@ public class MainView {
          pw.write("<form action=\"calc\" method=\"post\"> \n" +
                 "    Ingrese los numeros Lim Inf: <input type=\"text\" name=\"calcx\">\n" +
                 "    Ingrese los numeros Lim Sup: <input type=\"text\" name=\"calcy\">\n" +
-                 "    Ingrese los numeros Division : <input type=\"text\" name=\"calcz\">\n" +
                 "    <input type=\"submit\" value=\"Calc\">\n" +
                 "</form> ");
         pw.write("</html>");
