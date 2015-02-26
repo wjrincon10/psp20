@@ -24,20 +24,19 @@ public class MainView {
         pw.println("<h1>PSP 2.0 Program!</h1>");
         
          pw.write("<form action=\"calc\" method=\"post\"> \n" +
-                "    Ingrese los numeros Lim Inf: <input type=\"text\" name=\"calcx\">\n" +
-                "    Ingrese los numeros Lim Sup: <input type=\"text\" name=\"calcy\">\n" +
+                "    Ingrese X: <input type=\"text\" name=\"calcx\">\n" +
+                "    Ingrese Dof: <input type=\"text\" name=\"calcy\">\n" +
                 "    <input type=\"submit\" value=\"Calc\">\n" +
                 "</form> ");
         pw.write("</html>");
 
     }
     
-    public static void showResults(HttpServletRequest req, HttpServletResponse resp,  Double valX, Double valY, Double valZ, Double result)
+    public static void showResults(HttpServletRequest req, HttpServletResponse resp,  Double valX, Double valY, Double result)
             throws ServletException, IOException {
-        resp.getWriter().println("<b>List X:</b> "+valX +"<br>");
-        resp.getWriter().println("<b>List Y:</b> "+valY +"<br>");
-        resp.getWriter().println("<b>VS:</b> "+ valZ + "<br>");
-        resp.getWriter().println("<b>S:</b> "+ result + "<br>");
+        resp.getWriter().println("<b>X:</b> "+valX +"<br>");
+        resp.getWriter().println("<b>Dof:</b> "+valY +"<br>");
+        resp.getWriter().println("<b>P:</b> "+ result + "<br>");
         //resp.getWriter().println("<b>STD: </b> "+stdDev + "<br>");
     }
     
