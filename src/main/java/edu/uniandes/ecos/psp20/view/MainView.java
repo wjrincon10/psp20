@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Paquete que representa la vista
  */
 package edu.uniandes.ecos.psp20.view;
 
@@ -12,10 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
- * @author Administrador
+ * Clase para representar la vista
+ * @author Wilman Rincon
  */
 public class MainView {
+    /*
+    metodo para visualizar el formulario inicial
+    */
      public static void showHome(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         
@@ -32,6 +33,9 @@ public class MainView {
 
     }
     
+     /*
+     Metodo para escribir el resultado
+     */
     public static void showResults(HttpServletRequest req, HttpServletResponse resp,  Double valX, Double valY, Double result)
             throws ServletException, IOException {
         resp.getWriter().println("<b>X:</b> "+valX +"<br>");
@@ -40,6 +44,9 @@ public class MainView {
         //resp.getWriter().println("<b>STD: </b> "+stdDev + "<br>");
     }
     
+    /*
+    Metodo para escribir un error de la aplicacion
+    */
     public static void error(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         resp.getWriter().println("Error!!!");

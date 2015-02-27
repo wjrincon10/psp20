@@ -1,28 +1,46 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Paquete que representa el modelo.
  */
 package edu.uniandes.ecos.psp20.model;
 
 /**
- *
- * @author Administrador
+ * Clase que calcula el valor esperado segun la
+ * segun la regla de simpson
+ * @author wilman rincon
  */
 public class CalcularSimpson {
+    /*
+    * valor predetermindao de numseg
+    */
     private double num_seg = 10; 
+    
+    /*
+    * varibale valor de x
+    */
     private double x=0;
+    
+    /*
+    * varibale de W
+    */
     private double W = 0; 
+    
+    /*
+    * variable para dof
+    */
     private double dof = 0; 
     
-    private final double RAIZ_PI = Math.sqrt(Math.PI);
-             
+    /*
+    * Constructor de la clase
+    */
     public CalcularSimpson(double xp,double dof){ 
         this.dof = dof; 
         x= xp;
         W = xp/num_seg; 
     }
     
+    /*
+    * Metodo principal para calcular la intergral
+    */
     public double integral(){
         W = W/3;
         double Xi=0;
@@ -44,6 +62,9 @@ public class CalcularSimpson {
         return sum;
     }
     
+    /*
+    * Calcula el valor de F(x)
+    */
     public double functionX(double x){
         double num=0;
         double den =0;
@@ -53,6 +74,9 @@ public class CalcularSimpson {
         return (num/den)*function2(x); 
     }
     
+    /*
+    * Calcula el valor  de la segunda parte de la funcion
+    */
     public double function2 (double x){
         double base=0;
         double exp =0;
@@ -63,6 +87,9 @@ public class CalcularSimpson {
         return Math.pow(base, exp);
     }
     
+    /*
+    * Calcula el valor del factorial de un numero
+    */
     public double factorial(double n){ 
          int fact = 1;
           n = n-1;

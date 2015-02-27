@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Paquete que representa el controlador
  */
 package edu.uniandes.ecos.psp20.controller;
 
@@ -20,8 +18,8 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
 /**
- *
- * @author Administrador
+ * Clase de entrada para el controlador
+ * @author wilman rincon
  */
 public class App extends HttpServlet{
      public static void main(String[] args) {
@@ -39,6 +37,9 @@ public class App extends HttpServlet{
 
     }
     
+     /*
+     sobreescritura del metodo doGet
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -46,6 +47,9 @@ public class App extends HttpServlet{
        // MainView.showResults(req,resp,0.0," ",0.0);       
     }
 
+    /*
+    Sobreescritura del metodo DoPost
+    */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
                 
@@ -57,6 +61,9 @@ public class App extends HttpServlet{
         }
     }
     
+    /*
+    Metodo que llama al model y retorna el valor esperado P
+    */
     public void consoleInput(HttpServletRequest req, HttpServletResponse resp) throws Exception {
          try{
         String calcx = req.getParameter("calcx");
@@ -76,6 +83,4 @@ public class App extends HttpServlet{
          MainView.error(req, resp);
        }
     }
-   
-
 }
